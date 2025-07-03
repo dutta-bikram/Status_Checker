@@ -1,9 +1,10 @@
 name: Check Certificate Status
 
-on:
-  schedule:
-    - cron: '*/5 * * * *'  # every 5 minutes
-  workflow_dispatch:
+on: [workflow_dispatch] # disables automatic events like push/schedule
+
+  # schedule:
+  #   - cron: '*/5 * * * *'  # every 5 minutes
+  # workflow_dispatch:
 
 jobs:
   check_status:
